@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8C77906-8869-402D-BFB0-50298C4B81A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Restaurant_management</RootNamespace>
+    <AssemblyName>Restaurant_management</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\DeliverymansController.cs" />
+    <Compile Include="Controllers\Deliverystatuscontroller.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\FoodController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PurchaseController.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Admins.cs" />
+    <Compile Include="Models\Categories.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Customers.cs" />
+    <Compile Include="Models\Database.cs" />
+    <Compile Include="Models\Deliveryman.cs" />
+    <Compile Include="Models\Deliverymans.cs" />
+    <Compile Include="Models\Deliverystats.cs" />
+    <Compile Include="Models\DeliveryStatus.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\Foods.cs" />
+    <Compile Include="Models\Purchase.cs" />
+    <Compile Include="Models\Purchases.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddDeleviryman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddDeleviryman.Designer.cs">
+      <DependentUpon>AddDeleviryman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddFood.Designer.cs">
+      <DependentUpon>AddFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminPasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminPasswordChange.Designer.cs">
+      <DependentUpon>AdminPasswordChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin_login.Designer.cs">
+      <DependentUpon>Admin_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin_Panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin_Panel.Designer.cs">
+      <DependentUpon>Admin_Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Customer_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Customer_login.Designer.cs">
+      <DependentUpon>Customer_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeleteCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DeleteCustomer.Designer.cs">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeleteDeliveryman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DeleteDeliveryman.Designer.cs">
+      <DependentUpon>DeleteDeliveryman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeleteEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DeleteEmployee.Designer.cs">
+      <DependentUpon>DeleteEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeleteFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DeleteFood.Designer.cs">
+      <DependentUpon>DeleteFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeliveryManpanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DeliveryManpanel.Designer.cs">
+      <DependentUpon>DeliveryManpanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deliveryman_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Deliveryman_Login.Designer.cs">
+      <DependentUpon>Deliveryman_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employee_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Employee_Login.Designer.cs">
+      <DependentUpon>Employee_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employee_Panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Employee_Panel.Designer.cs">
+      <DependentUpon>Employee_Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OrderFood.Designer.cs">
+      <DependentUpon>OrderFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Status.Designer.cs">
+      <DependentUpon>Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateCustomerpass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateCustomerpass.Designer.cs">
+      <DependentUpon>UpdateCustomerpass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateDeliveryPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateDeliveryPass.Designer.cs">
+      <DependentUpon>UpdateDeliveryPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateEmployeePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateEmployeePass.Designer.cs">
+      <DependentUpon>UpdateEmployeePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateFood.Designer.cs">
+      <DependentUpon>UpdateFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserType.Designer.cs">
+      <DependentUpon>UserType.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddDeleviryman.resx">
+      <DependentUpon>AddDeleviryman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddFood.resx">
+      <DependentUpon>AddFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminPasswordChange.resx">
+      <DependentUpon>AdminPasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin_login.resx">
+      <DependentUpon>Admin_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin_Panel.resx">
+      <DependentUpon>Admin_Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Customer_login.resx">
+      <DependentUpon>Customer_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeleteCustomer.resx">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeleteDeliveryman.resx">
+      <DependentUpon>DeleteDeliveryman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeleteEmployee.resx">
+      <DependentUpon>DeleteEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeleteFood.resx">
+      <DependentUpon>DeleteFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeliveryManpanel.resx">
+      <DependentUpon>DeliveryManpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Deliveryman_Login.resx">
+      <DependentUpon>Deliveryman_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employee_Login.resx">
+      <DependentUpon>Employee_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employee_Panel.resx">
+      <DependentUpon>Employee_Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderFood.resx">
+      <DependentUpon>OrderFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Status.resx">
+      <DependentUpon>Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UpdateCustomerpass.resx">
+      <DependentUpon>UpdateCustomerpass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UpdateDeliveryPass.resx">
+      <DependentUpon>UpdateDeliveryPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UpdateEmployeePass.resx">
+      <DependentUpon>UpdateEmployeePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UpdateFood.resx">
+      <DependentUpon>UpdateFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserType.resx">
+      <DependentUpon>UserType.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
